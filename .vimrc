@@ -8,7 +8,7 @@
 
 "------------PLUGINS--------------
 call plug#begin('~/.vim/plugged')
-    Plug 'jiangmiao/auto-pairs' 
+    Plug 'jiangmiao/auto-pairs'
     Plug 'preservim/nerdtree'
     Plug 'vim-airline/vim-airline'
     Plug 'mbbill/undotree'
@@ -77,12 +77,10 @@ noremap :kai :color monokai_pro<CR> :set background=dark<CR> :echo "Switched Col
 map <leader><tab> :NERDTreeToggle<CR>
 
 " coc config for auto-completion
-let g:coc_global_extensions = ['coc-json', 'coc-snippets', 'coc-pyright', 'coc-java']
+let g:coc_global_extensions = ['coc-json', 'coc-snippets', 'coc-pyright', 'coc-java', 'coc-prettier', 'coc-emmet']
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-
 " --------BASIC SETTINGS-----------
 "Stops Vim from making sounds
 set noerrorbells 
@@ -116,8 +114,6 @@ set number
 
 " Encoding
 set encoding=utf-8
-
-" SEARCH SETTINGS
 
 " Highlight matching search patterns
 set hlsearch
