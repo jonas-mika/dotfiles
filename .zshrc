@@ -99,6 +99,7 @@ plugins=(
     alias-finder
     zsh-autosuggestions
     zsh-syntax-highlighting
+    k
 )
 # Further Interesting Plugins
 # common-aliases
