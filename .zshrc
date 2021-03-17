@@ -141,12 +141,15 @@ alias down='cd ~/Downloads'
 
 # Programming Directories
 alias prog="cd ~/programming/"
-alias py="cd ~/programming/python"
 alias cpp="cd ~/programming/cpp"
 alias web="cd ~/programmming/webdev"
 alias c="cd ~/programming/c"
 alias itu="cd ~/programming/itu"
-alias cprog='cd ~/programming/competitive_programming'
+alias cprog="cd ~/programming/competitive_programming"
+alias java="cd ~/programming/java"
+
+# Open Files in Applications
+alias mvim="open -a Vim"
 
 # Shortcut for Jumping Directories
 alias o='open'
@@ -167,13 +170,14 @@ alias rma="rm"
 
 # Shortcuts to Website 
 alias youtube="open https://www.youtube.de"
-alias learnit="https://learnit.itu.dk/my/"
-alias github="https://github.com/jonas-mika"
-alias translate="https://translate.google.com/"
-alias overleaf="https://www.overleaf.com/project"
+alias learnit="open https://learnit.itu.dk/my/"
+alias github="open https://github.com/jonas-mika"
+alias translate="open https://translate.google.com/"
+alias overleaf="open https://www.overleaf.com/project"
 
 # Path to Anaconda
 alias condapy="/Users/jonassenghaas/opt/anaconda3/bin/python"
+alias py="python"
 
 # Custom Prompt
 # autoload -U colors && colors
