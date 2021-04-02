@@ -139,6 +139,7 @@ alias root='cd /'
 alias desk='cd ~/Desktop'
 alias dbox='cd ~/Dropbox'
 alias down='cd ~/Downloads'
+alias fm='vifm'
 
 # Programming Directories
 alias programming="cd ~/programming/"
