@@ -23,7 +23,7 @@ call plug#end()
 "--------------KEY REMAPPING---------------------
 let mapleader=' '
 
-" Remap Normal Mode 
+" Remap Normal Mode
 inoremap <nowait> kj <Esc>
 vnoremap <nowait> kj <Esc>
 
@@ -35,9 +35,13 @@ noremap <leader>h ^
 noremap <leader>ö A
 
 " Add Functionality to delete newly written word
-imap <S-b> <ESC>hdawa 
+inoremap <C-b> <Esc>dvbi
 
-" Simple Remaps
+" Remap Ctrl-Key-N for iterating over autosuggestions
+" inoremap <S-j> <Down>
+" inoremap <S-k> <Up>
+
+" Simple Remaps of cursor movement
 nnoremap w b
 nnoremap e w
 
@@ -45,8 +49,8 @@ nnoremap e w
 nnoremap  <S-Tab> :UndotreeToggle<CR>
 
 " Remap Switching between Tabs
-nnoremap <S-k> :bnext<cr>
-nnoremap <S-j> :bprevious<cr>
+nnoremap <S-l> :bnext<cr>
+nnoremap <S-h> :bprevious<cr>
 
 " Remap Opening Files in Vim
 noremap <silent> <leader>o :tabe 
@@ -59,6 +63,9 @@ nnoremap <leader>s :w<cr>
 nnoremap <leader>sq :wq<cr>
 " Add Semicolon to end of line and enter normal mode again
 nnoremap <leader>v A;<Esc>
+" Moving Lines up and down
+vnoremap <S-n> :m '>+1<cr>gv
+vnoremap <S-m> :m '<-2<cr>gv
 
 " Remap copy and pasting out of/ into vim
 noremap <leader>y "+y
@@ -100,6 +107,7 @@ set noswapfile
 set nobackup
 set undodir=/Users/jonassenghaas/.vim/undodir
 set incsearch
+set nohlsearch
 
 "Faster update time
 set updatetime=300
@@ -109,8 +117,9 @@ set hidden
 set cmdheight=2
 
 " Show line numbers
-" set relativenumber
+set relativenumber
 set number
+set signcolumn=yes
 
 " Encoding
 set encoding=utf-8
@@ -183,6 +192,9 @@ set spell
 
 " Faster Rendering
 set ttyfast
+
+" Disable Dots for Whitespaces
+set nolist
 
 " Automatically save and load folds
 autocmd BufWinLeave *.* mkview

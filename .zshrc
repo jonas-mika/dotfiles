@@ -141,13 +141,8 @@ alias dbox='cd ~/Dropbox'
 alias down='cd ~/Downloads'
 
 # Programming Directories
-alias prog="cd ~/programming/"
-alias cpp="cd ~/programming/cpp"
-alias web="cd ~/programmming/webdev"
-alias c="cd ~/programming/c"
+alias programming="cd ~/programming/"
 alias itu="cd ~/programming/itu"
-alias cprog="cd ~/programming/competitive_programming"
-alias java="cd ~/programming/java"
 
 # Open Files in Applications
 alias mvim="open -a Vim"
@@ -184,3 +179,4 @@ alias py="python"
 # autoload -U colors && colors
 # PS1="%w, %T --- %B%n%b at %B%m%b in %~  >>> "
 alias config='/usr/bin/git --git-dir=/Users/jonassenghaas/dotfiles/.git/ --work-tree=/Users/jonassenghaas'
+export CLASSPATH="$HOME/programming/java/packages/algs4.jar"
