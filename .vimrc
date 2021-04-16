@@ -8,11 +8,13 @@
 
 "------------PLUGINS--------------
 call plug#begin('~/.vim/plugged')
+    Plug 'vifm/vifm.vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'preservim/nerdtree'
     Plug 'vim-airline/vim-airline'
     Plug 'mbbill/undotree'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'ap/vim-css-color'
 
     " Color Schemes
     Plug 'rakr/vim-one' " basic light/ dark colors
@@ -34,9 +36,9 @@ noremap <leader>k gg
 noremap <leader>h ^
 noremap <leader>ö A
 
-" Add Functionality to delete newly written word
+" Delete newly written word
 inoremap <C-b> <Esc>dvbi
-
+ 
 " Remap Ctrl-Key-N for iterating over autosuggestions
 " inoremap <S-j> <Down>
 " inoremap <S-k> <Up>
@@ -45,24 +47,20 @@ inoremap <C-b> <Esc>dvbi
 nnoremap w b
 nnoremap e w
 
-" Toggle Undotree
-nnoremap  <S-Tab> :UndotreeToggle<CR>
-
-" Remap Switching between Tabs
+" Dealing with Buffers
+nnoremap <silent> <leader>o :tabe 
+nnoremap <silent> <leader>c :bw<CR> 
 nnoremap <S-l> :bnext<cr>
 nnoremap <S-h> :bprevious<cr>
 
-" Remap Opening Files in Vim
-noremap <silent> <leader>o :tabe 
-
-" Remap Quit
+" Save and Quit Vim
 nnoremap <leader>q :q<cr>
-" Remap Saving 
 nnoremap <leader>s :w<cr>
-" Remap Quit and Save
 nnoremap <leader>sq :wq<cr>
+
 " Add Semicolon to end of line and enter normal mode again
 nnoremap <leader>v A;<Esc>
+
 " Moving Lines up and down
 vnoremap <S-n> :m '>+1<cr>gv
 vnoremap <S-m> :m '<-2<cr>gv
@@ -74,20 +72,34 @@ noremap <leader>p "+p
 " Clear the search highlight
 map <silent> <leader><esc> :silent nohlsearch<CR> :echo "Quitted Search"<CR>
 
+" Vifm Bindings
+nnoremap <leader>fm :Vifm<CR>
+nnoremap <leader>fs :VsplitVifm<CR>
+nnoremap <leader>fh :HsplitVifm<CR>
+
+" Nerdtree Bindings
+nnoremap  <S-Tab> :UndotreeToggle<CR>
+
+" NerdTree
+map <leader><tab> :NERDTreeToggle<CR>
+
 " Switch Color Theme
 noremap :box :color gruvbox<CR> :set background=dark<CR> :echo "SwitchedColor: Gruvbox"<CR>
 noremap :one :color one<CR> :set background=light<CR> :echo "Switched Color: One"<CR> 
 noremap :kai :color monokai_pro<CR> :set background=dark<CR> :echo "Switched Color: Monokai Pro"<CR> 
 
-
-" NerdTree
-map <leader><tab> :NERDTreeToggle<CR>
-
-" coc config for auto-completion
+" Coc Configs
 let g:coc_global_extensions = ['coc-json', 'coc-snippets', 'coc-pyright', 'coc-java', 'coc-prettier', 'coc-emmet']
 
+" Airline Configs
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Opening .config files
+command Vimconfig :tabe /Users/jonassenghaas/.vimrc<CR>
+command Zshconfig :tabe /Users/jonassenghaas/.zshrc<CR>
+
+
 " --------BASIC SETTINGS-----------
 "Stops Vim from making sounds
 set noerrorbells 
