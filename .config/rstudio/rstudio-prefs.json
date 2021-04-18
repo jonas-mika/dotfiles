@@ -1,0 +1,45 @@
+{
+    "jobs_tab_visibility": "closed",
+    "rmd_viewer_type": "pane",
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "zsh",
+    "terminal_initial_directory": "home",
+    "editor_keybindings": "vim",
+    "console_double_click_select": true,
+    "save_workspace": "always",
+    "num_spaces_for_tab": 4,
+    "highlight_selected_line": true,
+    "editor_theme": "Ambiance",
+    "font_size_points": 11,
+    "visual_markdown_editing_is_default": true,
+    "visual_markdown_editing_max_content_width": 900,
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet2",
+            "TabSet1",
+            "Console"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Files",
+            "Plots",
+            "Connections",
+            "Packages",
+            "Help",
+            "Presentation"
+        ],
+        "tabSet2": [],
+        "hiddenTabSet": [
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Viewer"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 1
+    },
+    "source_with_echo": true
+}

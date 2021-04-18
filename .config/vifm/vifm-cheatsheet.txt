@@ -1,0 +1,31 @@
+##################################
+Vifm - Cheatsheet
+##################################
+
+Author: Jonas-Mika Senghaas
+Github: jonas-mika
+
+
+BASIC MOVEMENT
+---------------------------------
+h,j,k,l - regular vim movements (left and right for entering and exiting dirs)
+gg, G - move absolute top/ bottom (added <space>j/k as keybindings for moving up and down)
+H, M, B - move relative top/ bottom 
+
+
+FILTERS
+----------------------------------
+zo - hide dot files
+za - show dot files
+:filter <regex> - filter for regex expression 
+zO - reset permanent filters
+
+
+KEYBINDINGS
+----------------------------------
+yf - copy file path into clipboard
+yd - copy dir path into clipboard
+p - preview in standard application
+s - open shell in current dir
+,e - open vifmrc and run all changes once exited
+<space>b - open bookmarks
