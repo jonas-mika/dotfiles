@@ -30,12 +30,15 @@ inoremap <nowait> kj <Esc>
 vnoremap <nowait> kj <Esc>
 
 " Remap movement behavior with Leader Key
-noremap <leader>l $
-noremap <leader>j G
-noremap <leader>k gg
-noremap <leader>h ^
-noremap <leader>ö A
+nnoremap <leader>l $
+nnoremap <leader>j G
+nnoremap <leader>k gg
+nnoremap <leader>h ^
+nnoremap <leader>ö A
+nnoremap { }
+nnoremap } {
 
+ 
 " Delete newly written word
 inoremap <C-b> <Esc>dvbi
  
